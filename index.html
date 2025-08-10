@@ -33,14 +33,14 @@ This is a single-page app that behaves like multiple pages using hash navigation
     .container{max-width:var(--max-width);margin:0 auto;padding:0 18px}
     .topbar{height:var(--header-height);display:flex;align-items:center;justify-content:space-between}
 
-    .nav-right{display:flex;gap:14px;align-items:center}
-    .nav-right a{padding:8px 10px;border-radius:6px;color:var(--muted);font-weight:600}
-    .nav-right a:hover,.nav-left a.active{background:#f1f7fb;color:var(--accent)}
+    .nav-left{display:flex;gap:14px;align-items:center}
+    .nav-left a{padding:8px 10px;border-radius:6px;color:var(--muted);font-weight:600}
+    .nav-left a:hover,.nav-left a.active{background:#f1f7fb;color:var(--accent)}
 
-    .brand{position:absolute;left:50%;transform:translateX(-50%);font-weight:800;letter-spacing:0.6px}
+    .brand{position:absolute;middle:50%;transform:translateX(-50%);font-weight:800;letter-spacing:0.6px}
     .brand small{display:block;font-weight:600;font-size:12px;color:var(--muted)}
 
-    .logo{height:52px;width:52px;border-radius:6px;object-fit:contain}
+    .logo{height:85px;width:85px;border-radius:6px;object-fit:contain}
 
     /* Hero / Slider */
     .hero{margin-top:18px}
@@ -50,11 +50,11 @@ This is a single-page app that behaves like multiple pages using hash navigation
 
     /* Fade-in-out box animation using staggered animation delays */
     .slide{opacity:0;transform:scale(1.02);}
-    .slide:nth-child(1){animation:fadeBox 25s infinite;animation-delay:0s}
-    .slide:nth-child(2){animation:fadeBox 25s infinite;animation-delay:5s}
-    .slide:nth-child(3){animation:fadeBox 25s infinite;animation-delay:10s}
-    .slide:nth-child(4){animation:fadeBox 25s infinite;animation-delay:15s}
-    .slide:nth-child(5){animation:fadeBox 25s infinite;animation-delay:20s}
+    .slide:nth-child(1){animation:fadeBox 35s infinite;animation-delay:0s}
+    .slide:nth-child(2){animation:fadeBox 35s infinite;animation-delay:5s}
+    .slide:nth-child(3){animation:fadeBox 35s infinite;animation-delay:10s}
+    .slide:nth-child(4){animation:fadeBox 35s infinite;animation-delay:15s}
+    .slide:nth-child(5){animation:fadeBox 35s infinite;animation-delay:20s}
 
     @keyframes fadeBox{
       0%{opacity:0;transform:scale(1.05)}
@@ -122,7 +122,7 @@ This is a single-page app that behaves like multiple pages using hash navigation
       </nav>
 
       <div class="brand" aria-hidden="false">
-        <div style="font-size:35px;text-align:left">SAKSHAM BIOSURGICAL
+        <div style="font-size:35px;text-align:middle">SAKSHAM BIOSURGICAL
         SERVICES</div>
         <small>Your Partner In Medical Excellence</small>
       </div>
