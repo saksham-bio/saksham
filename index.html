@@ -34,8 +34,8 @@ This is a single-page app that behaves like multiple pages using hash navigation
     .topbar{height:var(--header-height);display:flex;align-items:center;justify-content:space-between}
 
     .nav-right{display:flex;gap:14px;align-items:center}
-    .nav-left a{padding:8px 10px;border-radius:6px;color:var(--muted);font-weight:600}
-    .nav-left a:hover,.nav-left a.active{background:#f1f7fb;color:var(--accent)}
+    .nav-right a{padding:8px 10px;border-radius:6px;color:var(--muted);font-weight:600}
+    .nav-right a:hover,.nav-left a.active{background:#f1f7fb;color:var(--accent)}
 
     .brand{position:absolute;left:50%;transform:translateX(-50%);font-weight:800;letter-spacing:0.6px}
     .brand small{display:block;font-weight:600;font-size:12px;color:var(--muted)}
@@ -111,7 +111,7 @@ This is a single-page app that behaves like multiple pages using hash navigation
 <body>
   <header>
     <div class="container topbar">
-      <nav class="nav-left" aria-label="Main navigation">
+      <nav class="nav-right" aria-label="Main navigation">
         <a href="#about" class="nav-link" data-target="about">About Us</a>
         <a href="#products" class="nav-link" data-target="products">Products</a>
         <a href="#network" class="nav-link" data-target="network">Network</a>
@@ -122,12 +122,12 @@ This is a single-page app that behaves like multiple pages using hash navigation
       </nav>
 
       <div class="brand" aria-hidden="false">
-        <div style="font-size:35px;text-align:right">SAKSHAM BIOSURGICAL
+        <div style="font-size:35px;text-align:left">SAKSHAM BIOSURGICAL
         SERVICES</div>
         <small>Your Partner In Medical Excellence</small>
       </div>
 
-      <div style="min-width:106px;text-align:right">
+      <div style="min-width:106px;text-align:left">
         <img id="logo" class="logo" src="images/07.png" alt=".">
       </div>
     </div>
