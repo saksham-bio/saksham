@@ -32,31 +32,68 @@ This is a single-page app that behaves like multiple pages using hash navigation
     header{background:#fff;position:sticky;top:0;z-index:50;box-shadow:0 2px 6px rgba(20,20,40,0.06)}
     .container{max-width:var(--max-width);margin:0 auto;padding:0 18px}
     .topbar{
-       height:var(--header-height);
-       display:flex;
-       align-items:right;
-       justify-content:space-between
+       position: fixed;
+       top: 0;
+       left: 0;
+       right: 0;
+       background: white;
+       display: flex;
+       align-items: center;
+       justify-content: space-between;
+       padding: 10px 30px;
+       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+       z-index: 1000;
     }        
+    /* Logo + Name + Tagline */
+   .logo-container {
+       display: flex;
+       align-items: center;
+       gap: 0; /*   No gap between logo and text */
+   }
+   .logo {
+       height: 60px;
+       width: 60px;
+       object-fit: contain;
+   }
+   .brand-text {
+       display: flex;
+       flex-direction: column;
+       line-height: 1.2;
+   }
 
-    .nav-left{
-       display:flex;
-       gap:14px;
-       align-items:center;
-       justify-content: flex-start;
-       order :1
-    }
-    .nav-left a{
-       padding:8px 10px;
-       border-radius:6px;
-       color:var(--muted);
-       font-weight:600;
-       font-size:14px
-    }
-    .nav-left a:hover,.nav-left a.active{background:#f1f7fb;color:var(--accent)}
+   .company-name {
+       margin: 0;
+       font-size: 22px;
+       font-weight: bold;
+       color: #666; /* Blue company name */
+   }
+
+   .tagline {
+       margin: 0;
+       font-size: 14px;
+       color: #666;
+   }
+   /* Menu */
+   .menu {
+       display: flex;
+       gap: 15px;
+   }
+
+   .menu a {
+       text-decoration: none;
+       color: #333;
+       font-weight: 600;
+       padding: 6px 10px;
+       border-radius: 4px;
+       transition: background 0.3s, color 0.3s;
+   }
+
+   .menu a:hover {
+       background: #f0f8ff; /* Light blue background */
+       color: #3399FF; /* Blue text on hover */
+   }
    
-    .brand{display:flex;align-item:center;gap:8px;left:50%;transform:translateX(-50%);font-weight:800;letter-spacing:0.6px;order:2}
-    .brand small{display:block;font-weight:600;font-size:12px;color:var(--muted)}  
-    .logo{height:75px;width:75px;border-radius:6px;object-fit:contain;order : 3}
+    
 
     /* Hero / Slider */
     .hero{margin-top:18px}
@@ -113,6 +150,24 @@ This is a single-page app that behaves like multiple pages using hash navigation
       .about-image{width:100%}
       .slider{height:220px}
     }
+    /* WhatsApp Button */
+    .whatsapp-float {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: #25D366;
+        padding: 10px;
+        border-radius: 50%;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+        z-index: 1000;
+    }
+    .whatsapp-float img {
+        width: 40px;
+        height: 40px;
+    }
+    .whatsapp-float:hover {
+        background: #20b954;
+    }
 
     /* simple hidden page sections */
     section.page{display:none;padding:18px}
@@ -125,26 +180,26 @@ This is a single-page app that behaves like multiple pages using hash navigation
   </style>
 </head>
 <body>
-  <header>
-    <div class="container topbar">
-      <nav class="nav-left" aria-label="Main navigation">
-        <a href="#about" class="nav-link" data-target="about">About Us</a>
-        <a href="#products" class="nav-link" data-target="products">Products</a>
-        <a href="#network" class="nav-link" data-target="network">Network</a>
-        <a href="#register" class="nav-link" data-target="register">Register</a>
-        <a href="#career" class="nav-link" data-target="career">Career</a>
-        <a href="#inquiry" class="nav-link" data-target="inquiry">Inquiry</a>
-        <a href="#contact" class="nav-link" data-target="contact">Contact Us</a>
-      </nav>
-
-        <div class="brand" aria-hidden="false">
-          <img id="logo" class="logo" src="images/logo.jpeg" alt=".">
-          <span style="font-size:25px">SAKSHAM BIOSURGICAL SERVICES</span>
-          <small>Your Partner In Medical Excellence</small>
-         
+    <!-- Topbar -->
+<header class="topbar">
+    <div class="logo-container">
+        <img src="images/logo.jpeg" alt="Logo" class="logo">
+        <div class="brand-text">
+            <h1 class="company-name">Saksham Biosurgical Services</h1>
+            <p class="tagline">Your Partner In Medical Excellence</p>
         </div>
     </div>
-  </header>
+
+    <nav class="menu">
+        <a href="#about">About Us</a>
+        <a href="#products">Products</a>
+        <a href="#network">Network</a>
+        <a href="#register">Register</a>
+        <a href="#career">Career</a>
+        <a href="#inquiry">Inquiry</a>
+        <a href="#contact">Contact Us</a>
+    </nav>
+</header>
 
   <!-- Pages (single file) -->
   <main>
@@ -189,12 +244,9 @@ This is a single-page app that behaves like multiple pages using hash navigation
               </div>
               <div>
                 <strong>Contact</strong><br>
-                <span class="muted">+91-XXXXXXXXXX | email@yourdomain.com</span>
+                <span class="muted">+91-7532040386 | sakshambiosurgicalservices@gmail.com</span>
               </div>
-              <div>
-                <strong>Office in India</strong><br>
-                <span class="muted">Locations: Mumbai · Delhi · Bengaluru</span>
-              </div>
+             
             </div>
           </div>
           <div class="about-image">
