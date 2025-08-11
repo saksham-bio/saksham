@@ -1,7 +1,7 @@
 <!--
 Saksham Biosurgical Services - Single-file website (index.html)
 Instructions:
- - Put your images in a folder named `images/` next to this file.
+ - Put your images in a folder named images/ next to this file.
  - Replace images/photo1.jpg ... photo5.jpg and images/logo.png with your real files.
  - Open this file in a browser or host on GitHub Pages (push to a repo and enable Pages).
 
@@ -32,15 +32,18 @@ This is a single-page app that behaves like multiple pages using hash navigation
     header{background:#fff;position:sticky;top:0;z-index:50;box-shadow:0 2px 6px rgba(20,20,40,0.06)}
     .container{max-width:var(--max-width);margin:0 auto;padding:0 18px}
     .topbar{height:var(--header-height);display:flex;align-items:center;justify-content:space-between}
+    .brand {
+        color: #003366; /* Dark blue */
+    }
 
-    .nav-left{display:flex;gap:14px;align-items:center}
-    .nav-left a{padding:8px 10px;border-radius:6px;color:var(--muted);font-weight:600}
+    .nav-left{display:flex;gap:14px;align-items:center;justify-content: flex-start;order :1}
+    .nav-right a{padding:8px 10px;border-radius:6px;color:var(--muted);font-weight:600;font-size:14px}
     .nav-left a:hover,.nav-left a.active{background:#f1f7fb;color:var(--accent)}
 
-    .brand{position:absolute;left:50%;transform:translateX(-50%);font-weight:800;letter-spacing:0.6px}
+    .brand{position:absolute;left:50%;transform:translateX(-50%);font-weight:800;letter-spacing:0.6px;order:2}
     .brand small{display:block;font-weight:600;font-size:12px;color:var(--muted)}
 
-    .logo{height:52px;width:52px;border-radius:6px;object-fit:contain}
+    .logo{height:75px;width:75px;border-radius:6px;object-fit:contain;order : 3}
 
     /* Hero / Slider */
     .hero{margin-top:18px}
@@ -50,11 +53,11 @@ This is a single-page app that behaves like multiple pages using hash navigation
 
     /* Fade-in-out box animation using staggered animation delays */
     .slide{opacity:0;transform:scale(1.02);}
-    .slide:nth-child(1){animation:fadeBox 25s infinite;animation-delay:0s}
-    .slide:nth-child(2){animation:fadeBox 25s infinite;animation-delay:5s}
-    .slide:nth-child(3){animation:fadeBox 25s infinite;animation-delay:10s}
-    .slide:nth-child(4){animation:fadeBox 25s infinite;animation-delay:15s}
-    .slide:nth-child(5){animation:fadeBox 25s infinite;animation-delay:20s}
+    .slide:nth-child(1){animation:fadeBox 35s infinite;animation-delay:0s}
+    .slide:nth-child(2){animation:fadeBox 35s infinite;animation-delay:5s}
+    .slide:nth-child(3){animation:fadeBox 35s infinite;animation-delay:10s}
+    .slide:nth-child(4){animation:fadeBox 35s infinite;animation-delay:15s}
+    .slide:nth-child(5){animation:fadeBox 35s infinite;animation-delay:20s}
 
     @keyframes fadeBox{
       0%{opacity:0;transform:scale(1.05)}
@@ -122,12 +125,12 @@ This is a single-page app that behaves like multiple pages using hash navigation
       </nav>
 
       <div class="brand" aria-hidden="false">
-        <div style="font-size:28px">Saksham Biosurgical Services</div>
+        <div style="font-size:25px">SAKSHAM BIOSURGICAL SERVICES</div>
         <small>Your Partner In Medical Excellence</small>
-      </div>
-
-      <div style="min-width:56px;text-align:left">
-        <img id="logo" class="logo" src="images/07.png" alt=".">
+        </div>
+        <div style="min-width:106px">
+          <img id="logo" class="logo" src="images/logo.jpeg" alt=".">
+        </div>
       </div>
     </div>
   </header>
