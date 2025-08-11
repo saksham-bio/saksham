@@ -34,9 +34,13 @@ This is a single-page app that behaves like multiple pages using hash navigation
     .topbar{height:var(--header-height);display:flex;align-items:center;justify-content:space-between}
     .brand {
         color: #003366; /* Dark blue */
+        font-size: 24px;
+        font-weight: 800;
+        white-space: nowrap;
+        
     }
 
-    .nav-left{display:flex;gap:14px;align-items:center;justify-content: flex-start;order :1}
+    .nav-left{display:flex;gap:10px;align-items:center;justify-content: flex-start;order :1}
     .nav-right a{padding:8px 10px;border-radius:6px;color:var(--muted);font-weight:600;font-size:14px}
     .nav-left a:hover,.nav-left a.active{background:#f1f7fb;color:var(--accent)}
 
@@ -48,7 +52,7 @@ This is a single-page app that behaves like multiple pages using hash navigation
     transform: translateY(-50%); /* Center vertically only */
     display: flex;       /* Keep logo and name in one row */
     align-items: center; /* Align logo & text nicely */
-    gap: 20px;            /* Space between logo and text */
+    gap: 8px;            /* Space between logo and text */
     font-weight: 800;
     letter-spacing: 0.6px;
     order: 2;
