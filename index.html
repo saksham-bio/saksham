@@ -154,6 +154,69 @@ This is a single-page app that behaves like multiple pages using hash navigation
     .footer-col{margin-bottom:12px}
     .footer-links{display:flex;gap:10px;flex-wrap:wrap;font-size:13px}
     .footer-small{font-size:12px;color:#9fb4c8;margin-top:12px}
+   /* About us */
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f8f9fa;
+    color: #333;
+}
+
+.about-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 10%;
+    gap: 40px;
+}
+
+.about-content {
+    flex: 1;
+    text-align: left;
+}
+
+.about-content h2 {
+    font-size: 32px;
+    color: #007BFF; /* Pleasant hospital blue */
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.about-content h3 {
+    margin-top: 20px;
+    font-size: 20px;
+    color: #0056b3;
+}
+
+.about-image {
+    flex: 1;
+    text-align: right;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-image {
+        text-align: center;
+    }
+}
+
 
     /* Mobile responsiveness */
     @media(max-width:900px){
@@ -282,23 +345,32 @@ We also offer refurbished medical equipment, ensuring cost-effective options wit
     </section>
 
     <!-- Other pages (simple sections) -->
-    <section id="about" class="page">
-     <div class="about-section container" style="margin-top:18px">
-   
-        <h1>About Us</h1>
-        <h2>Welcome to Saksham Biosurgical Services</h2>
-          
-        <p class="muted">Founded in 2021, Saksham Biosurgical Services is a trusted provider of high-quality hospital equipment and comprehensive healthcare solutions. We specialize in supplying and servicing a wide range of medical systems, including Medical Gas Pipeline Systems (MGPS), critical care equipment, physiotherapy devices, operation theatre (OT) setups, hospital beds, and more.
-
-We also offer refurbished medical equipment, ensuring cost-effective options without compromising on performance or safety. Our mission is to equip healthcare facilities with reliable, efficient, and advanced technology that supports better patient care.
-
-With a commitment to quality, integrity, and customer satisfaction, our team works closely with hospitals, clinics, and healthcare professionals to deliver tailored solutions and responsive support. Whether it’s installation, maintenance, or upgrades, we ensure every project meets the highest standards of safety and performance.
-        Our Mission:
-To provide reliable, efficient, and high-quality solutions that exceed client expectations while upholding the highest standards of safety and integrity.</p>
-      <div class="about-image">
-            <img src="images/about.png" alt="About image - replace images/about.jpg">
-          </div>
-      </div>
+    <section class="about-section">
+    <div class="about-content">
+        <h2>About Us</h2>
+        <p>
+            Founded in 2021, <strong>Saksham Biosurgical Services</strong> is a trusted provider of high-quality hospital equipment and comprehensive healthcare solutions. 
+            We specialize in supplying and servicing a wide range of medical systems, including Medical Gas Pipeline Systems (MGPS), critical care equipment, 
+            physiotherapy devices, operation theatre (OT) setups, hospital beds, and more.
+        </p>
+        <p>
+            We also offer refurbished medical equipment, ensuring cost-effective options without compromising on performance or safety. Our mission is to equip healthcare facilities with 
+            reliable, efficient, and advanced technology that supports better patient care.
+        </p>
+        <p>
+            With a commitment to quality, integrity, and customer satisfaction, our team works closely with hospitals, clinics, and healthcare professionals 
+            to deliver tailored solutions and responsive support. Whether it’s installation, maintenance, or upgrades, we ensure every project meets 
+            the highest standards of safety and performance.
+        </p>
+        <h3>Our Mission:</h3>
+        <p>
+            To provide reliable, efficient, and high-quality solutions that exceed client expectations while upholding the highest standards of safety and integrity.
+        </p>
+    </div>
+    
+    <div class="about-image">
+        <img src="images/about.png" alt="About Saksham Biosurgical Services">
+    </div>
     </section>
 
     <section id="products" class="page">
