@@ -1,4 +1,11 @@
- <style>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Saksham Biosurgical Services</title>
+
+<style>
     :root{
       --accent:#0066a1;
       --muted:#666;
@@ -162,3 +169,4 @@
     .muted{color:var(--muted)}
     .btn{display:inline-block;padding:8px 12px;border-radius:8px;background:var(--accent);color:#fff;font-weight:700}
   </style>
+</head>
