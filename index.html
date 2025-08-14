@@ -153,7 +153,7 @@ This is a single-page app that behaves like multiple pages using hash navigation
   
    
    /* About Section - Side by Side */
-.about-section {
+.about-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -165,27 +165,27 @@ This is a single-page app that behaves like multiple pages using hash navigation
     border-radius: 10px;
 }
 
-.about-section .about-image {
+.about-container .about-image {
     flex: 1;
 }
 
-.about-section .about-image img {
+.about-container .about-image img {
     width: 100%;
     max-width: 400px;
     border-radius: 10px;
     box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
 }
 
-.about-section .about-text {
+.about-container .about-text {
     flex: 2;
 }
 
-.about-section .about-text h2 {
+.about-container .about-text h2 {
     color: #2E86C1; /* Pleasant biomedical blue */
     margin-bottom: 15px;
 }
 
-.about-section .about-text p {
+.about-container .about-text p {
     color: #444;
     line-height: 1.6;
 }
@@ -341,7 +341,7 @@ We also offer refurbished medical equipment, ensuring cost-effective options wit
 
    <!-- Other pages (simple sections)    about us -->
    
-    <section id="about-section" class="page">
+    <section id="about-container" class="page">
      <section class="about-header">
     </section>
     <div class="container">
