@@ -252,39 +252,6 @@ This is a single-page app that behaves like multiple pages using hash navigation
 .dropdown:hover .dropdown-content {
     display: block;
 }
-/* Show dropdown on hover */
-.dropdown:hover .dropdown-content {
-    display: grid;
-}
-
-/* Grid layout for products */
-.product-grid {
-    grid-template-columns: repeat(4, 80px);
-    gap: 10px;
-}
-
-/* Product images */
-.product-grid img {
-    width: 80px;
-    height: 80px;
-    object-fit: cover;
-    border-radius: 6px;
-    transition: transform 0.3s ease;
-}
-
-/* Bounce effect on hover */
-.product-grid img:hover {
-    animation: bounce 0.5s;
-}
-
-/* Bounce animation */
-@keyframes bounce {
-    0%   { transform: translateY(0); }
-    30%  { transform: translateY(-8px); }
-    50%  { transform: translateY(0); }
-    70%  { transform: translateY(-4px); }
-    100% { transform: translateY(0); }
-}
 
     /* Footer */
     footer{margin-top:26px;background:#0b1b2b;color:#ddd;padding:22px 0}
