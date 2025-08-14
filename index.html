@@ -30,10 +30,6 @@ This is a single-page app that behaves like multiple pages using hash navigation
 
     /* Header */
     header{background:#fff;position:sticky;top:0;z-index:50;box-shadow:0 2px 6px rgba(20,20,40,0.06)}
-    /* Gap between fixed header and content */
-    section {
-    margin-top: 50px; /* adjust to your liking */
-    }
     .container{max-width:var(--max-width);margin:0 auto;padding:0 18px}
     .topbar{
        position: fixed;
@@ -150,19 +146,6 @@ This is a single-page app that behaves like multiple pages using hash navigation
     .about-text p{color:var(--muted);line-height:1.5}
     .about-image{width:360px;flex-shrink:0}
     .about-image img{width:100%;border-radius:10px;height:240px;object-fit:cover}
-  
-
-/* Mobile view: stack image and text */
-@media (max-width: 900px) {
-    .about-section {
-        flex-direction: column;
-        text-align: center;
-    }
-    .about-section .about-image img {
-        max-width: 100%;
-    }
-}
-
 
     /* Footer */
     footer{margin-top:26px;background:#0b1b2b;color:#ddd;padding:22px 0}
@@ -220,20 +203,23 @@ This is a single-page app that behaves like multiple pages using hash navigation
     <div class="logo-container">
         <img src="images/logo.jpeg" alt="Logo" class="logo">
         <div class="brand-text">
+        
+           <a href="index.html" style="text-decoration: none; color: inherit;">
+           
             <h1 class="company-name">Saksham Biosurgical Services</h1>
             <p class="tagline">Your Partner In Medical Excellence</p>
-      
+            </a>
         </div>
     </div>
 
     <nav class="menu">
         <a href="#about">About Us</a>
-        <a href="products.html">Products</a>
-        <a href="network.html">Network</a>
-        <a href="register.html">Register</a>
-        <a href="career.html">Career</a>
-        <a href="inquiry.html">Inquiry</a>
-        <a href="contact.html">Contact Us</a>
+        <a href="#products">Products</a>
+        <a href="#network">Network</a>
+        <a href="#register">Register</a>
+        <a href="#career">Career</a>
+        <a href="#inquiry">Inquiry</a>
+        <a href="#contact">Contact Us</a>
     </nav>
 </header>
 
@@ -268,7 +254,7 @@ This is a single-page app that behaves like multiple pages using hash navigation
         </div>
 
         <!-- about brief two-col -->
-        <div class="about-section" style="margin-top:18px">
+        <div class="about-section container" style="margin-top:18px">
           <div class="about-text">
             <h2>About Saksham Biosurgical Services</h2>
             <p>Founded in 2021, Saksham Biosurgical Services is a trusted provider of high-quality hospital equipment and comprehensive healthcare solutions. 
@@ -295,14 +281,15 @@ We also offer refurbished medical equipment, ensuring cost-effective options wit
 
       </div>
     </section>
-  <!-- Header White Section with Border -->
-    
+
+<body>
+    <!-- Header White Section with Border -->
+    <section class="about-header">
+    </section>
 
    <!-- Other pages (simple sections)    about us -->
    
-    <section id="about-container" class="page">
-     <section class="about-header">
-    </section>
+    <section id="about" class="page">
     <div class="container">
     <div class="about-text">
             <h2><span class="company-name"></span></h2>
@@ -332,9 +319,7 @@ We also offer refurbished medical equipment, ensuring cost-effective options wit
         <img src="images/about.png" alt="About Saksham Biosurgical Services">
     </div>
     </section>
-   
-
-   
+</body>     
 
     <section id="products" class="page">
       <div class="container">
