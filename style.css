@@ -1,11 +1,20 @@
+<!--
+Saksham Biosurgical Services - Single-file website (index.html)
+Instructions:
+ - Put your images in a folder named `images/` next to this file.
+ - Replace images/photo1.jpg ... photo5.jpg and images/logo.png with your real files.
+ - Open this file in a browser or host on GitHub Pages (push to a repo and enable Pages).
+
+This is a single-page app that behaves like multiple pages using hash navigation (#about, #products, etc.).
+-->
+
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Saksham Biosurgical Services</title>
-
-<style>
+  <style>
     :root{
       --accent:#0066a1;
       --muted:#666;
@@ -21,6 +30,11 @@
 
     /* Header */
     header{background:#fff;position:sticky;top:0;z-index:50;box-shadow:0 2px 6px rgba(20,20,40,0.06)}
+    /* Gap between fixed header and content */
+    section {
+    margin-top: 100px; /* adjust to your liking */
+    }
+
     .container{max-width:var(--max-width);margin:0 auto;padding:0 18px}
     .topbar{
        position: fixed;
@@ -34,6 +48,7 @@
        padding: 10px 30px;
        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
        z-index: 1000;
+      
     }        
     /* Logo + Name + Tagline */
    .logo-container {
@@ -56,7 +71,7 @@
        margin: 0;
        font-size: 26px;
        font-weight: bold;
-       color: #2E86C1; /* Blue company name 2E86C1 */
+       color: #666; /* Blue company name 2E86C1 */
    }
 
    .tagline {
@@ -83,63 +98,58 @@
        background: #f0f8ff; /* Light blue background */
        color: #3399FF; /* Blue text on hover */
    }
+/* About Us section - white background, text left, image right */
+.about-section {
+    max-width: 1100px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 12px;
+    padding: 30px;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h2 {
+    margin-top: 0;
+    color: #0066a1;
+}
+
+.about-text p {
+    color: #555;
+    line-height: 1.6;
+}
+
+.about-image {
+    width: 400px;
+    flex-shrink: 0;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 10px;
+    height: auto;
+    object-fit: cover;
+}
+
+@media(max-width:900px){
+    .about-section {
+        flex-direction: column;
+        text-align: center;
+    }
+    .about-image {
+        width: 100%;
+    }
+}
    
     
-
-    /* Hero / Slider */
-    .hero{margin-top:18px}
-    .slider{height:500px;
-            max-width:var(--max-width);
-            margin:0 auto;
-            border-radius:12px;
-            overflow:hidden;
-            position:relative;
-            background:#000;
-            aspect-ratio: 16 / 9;
-           }
-    .slide{position:absolute;
-           inset:0;
-           display:flex;
-           align-items:center;
-           justify-content:center}
-    .slide img{width:100%;
-               height:100%;
-               object-fit:contain;
-               background-color:#000;
-               display:block}
-
-    /* Fade-in-out box animation using staggered animation delays */
-    .slide{opacity:0;transform:scale(1.02);}
-    .slide:nth-child(1){animation:fadeBox 35s infinite;animation-delay:0s}
-    .slide:nth-child(2){animation:fadeBox 35s infinite;animation-delay:5s}
-    .slide:nth-child(3){animation:fadeBox 35s infinite;animation-delay:10s}
-    .slide:nth-child(4){animation:fadeBox 35s infinite;animation-delay:15s}
-    .slide:nth-child(5){animation:fadeBox 35s infinite;animation-delay:20s}
-
-    @keyframes fadeBox{
-      0%{opacity:0;transform:scale(1.05)}
-      4%{opacity:1;transform:scale(1)}
-      20%{opacity:1}
-      24%{opacity:0;transform:scale(0.98)}
-      100%{opacity:0}
-    }
-
-    /* Cards */
-    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:26px auto;max-width:var(--max-width);padding:0 18px}
-    .card{background:var(--card-bg);padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(20,30,60,0.06);min-height:140px}
-    .card h3{margin:0 0 8px}
-    .card p{margin:0;color:var(--muted)}
-
-    /* About / two-column */
-    .about-section{max-width:var(--max-width);margin:22px auto;background:#fff;border-radius:12px;padding:20px;display:flex;gap:20px;align-items:center}
-    .about-text{flex:1}
-    .about-text h2{margin-top:0}
-    .about-text p{color:var(--muted);line-height:1.5}
-    .about-image{width:360px;flex-shrink:0}
-    .about-image img{width:100%;border-radius:10px;height:240px;object-fit:cover}
-
     /* Footer */
-    footer{margin-top:36px;background:#0b1b2b;color:#ddd;padding:22px 0}
+    footer{margin-top:26px;background:#0b1b2b;color:#ddd;padding:22px 0}
     .footer-inner{max-width:var(--max-width);margin:0 auto;display:flex;gap:20px;align-items:flex-start;justify-content:space-between;padding:0 18px}
     .footer-left{flex:1}
     .footer-col{margin-bottom:12px}
@@ -158,7 +168,24 @@
       .about-image{width:100%}
       .slider{height:220px}
     }
-   
+    /* WhatsApp Button */
+    .whatsapp-float {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: #25D366;
+        padding: 10px;
+        border-radius: 50%;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+        z-index: 1000;
+    }
+    .whatsapp-float img {
+        width: 40px;
+        height: 40px;
+    }
+    .whatsapp-float:hover {
+        background: #20b954;
+    }
 
     /* simple hidden page sections */
     section.page{display:none;padding:18px}
@@ -168,5 +195,5 @@
     /* tiny helpers */
     .muted{color:var(--muted)}
     .btn{display:inline-block;padding:8px 12px;border-radius:8px;background:var(--accent);color:#fff;font-weight:700}
-</style>
+  </style>
 </head>
