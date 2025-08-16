@@ -254,15 +254,35 @@ This is a single-page app that behaves like multiple pages using hash navigation
 }
 
    
-/* Products section layout */
+ /* Layout: images on left, list on right */
 .products-layout {
   display: flex;
+  flex-wrap: nowrap;
   gap: 30px;
   align-items: flex-start;
-  margin-top: 30px;
 }
 
-/* Product list on left */
+/* Left side images */
+.products-images {
+  flex: 2;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.products-images img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+.products-images img:hover {
+  transform: scale(1.05);
+}
+
+/* Right side product list */
 .products-list {
   flex: none;
   width: 250px;
@@ -270,16 +290,15 @@ This is a single-page app that behaves like multiple pages using hash navigation
   flex-direction: column;
   gap: 8px;
   padding: 15px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  background: #fff;
+  border: 1px solid #ccc;      /* Light gray border */
+  border-radius: 10px;         /* Curved corners */
+  background: #fff;            /* White background inside */
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
 .products-list a {
-  display: block;
-  width: 100%;
-  padding: 10px 12px;
+  padding: 12px 14px;
+  background: #f8f9fa;
   border-radius: 6px;
   text-decoration: none;
   color: #333;
@@ -292,16 +311,8 @@ This is a single-page app that behaves like multiple pages using hash navigation
   color: white;
 }
 
-/* Right side: product image */
-.products-image {
-  flex: 2;
-}
-.products-image img {
-  width: 100%;
-  max-width: 500px;
-  border-radius: 10px;
-  object-fit: cover;
-}
+
+
 
 
     /* Footer */
