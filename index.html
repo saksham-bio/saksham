@@ -260,6 +260,7 @@ This is a single-page app that behaves like multiple pages using hash navigation
   flex-wrap: nowrap;
   gap: 30px;
   align-items: flex-start;
+  margin-top: 30px;
 }
 
 /* Left side images */
@@ -276,16 +277,17 @@ This is a single-page app that behaves like multiple pages using hash navigation
   object-fit: cover;
   border-radius: 8px;
   transition: transform 0.3s;
+  cursor: pointer;
 }
 
 .products-images img:hover {
-  transform: scale(1.05);
+  transform: scale(1.1);
 }
 
 /* Right side product list */
 .products-list {
   flex: none;
-  width: 200px;
+  width: 0 0 250px;
   display: flex;
   flex-direction: column;
   gap: 8px;
