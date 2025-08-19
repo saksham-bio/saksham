@@ -438,14 +438,13 @@ This is a single-page app that behaves like multiple pages using hash navigation
   padding-left: 20px;
 }
 .network-image {
-  flex: 1;
-  display: flex;
-  justify-content: center; /* keeps map centered */
+  flex: none;
+  width: 250px;
 }
 
 .network-image img {
-  width: 50%;         /* takes full container width */
-  max-width: 100px;    /* map size limit */
+  width: 100%;         /* takes full container width */
+  hight: auto;
   border-radius: 10px;
   object-fit: contain; /* avoids cutting */
 }
