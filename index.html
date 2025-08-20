@@ -506,50 +506,97 @@ This is a single-page app that behaves like multiple pages using hash navigation
     max-width: 100%;
   }
 }
- .register-section {
-      max-width: 700px;
-      margin: 40px auto;
-      background: #fff;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    }
-    .register-section h2 {
-      text-align: center;
-      margin-bottom: 20px;
-      color: #0066a1;
-    }
-    .form-group {
-      margin-bottom: 15px;
-    }
-    label {
-      display: block;
-      font-weight: 600;
-      margin-bottom: 6px;
-    }
-    input, textarea, select {
-      width: 100%;
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      font-size: 15px;
-    }
-    .required {
-      color: red;
-      font-weight: bold;
-    }
-    button {
-      background: #0066a1;
-      color: #fff;
-      padding: 12px 20px;
-      border: none;
-      border-radius: 6px;
-      font-size: 16px;
-      cursor: pointer;
-    }
-    button:hover {
-      background: #004d80;
-    }
+ .register-wrapper {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  margin-top: 60px;
+}
+
+.register-form {
+  flex: 2;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.register-form h1 {
+  color: #0066a1;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.register-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.register-form input,
+.register-form textarea {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.register-form button {
+  margin-top: 10px;
+  padding: 10px;
+  background: #0066a1;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.register-form button:hover {
+  background: #004d73;
+}
+
+/* Product list styling */
+.product-list {
+  flex: 1;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.product-list h2 {
+  margin-top: 0;
+  font-size: 18px;
+  color: #0066a1;
+  margin-bottom: 15px;
+}
+
+.product-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.product-list li {
+  margin: 10px 0;
+}
+
+.product-list a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  padding: 6px 10px;
+  display: block;
+  border-radius: 6px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.product-list a:hover {
+  background: #f0f8ff;
+  color: #0066a1;
+}
+
 
 
 
@@ -838,6 +885,7 @@ We also offer refurbished medical equipment, ensuring cost-effective options wit
 
    <section id="register" class="page">
       <div class="container register-section">
+      <div class= "register-form">
       <h2>Register for Warranty</h2>
       <form id="registerForm" action="save_registration.php" method="POST">
       </div>
@@ -883,6 +931,7 @@ We also offer refurbished medical equipment, ensuring cost-effective options wit
 
       <button type="submit">Submit Registration</button>
     </form>
+    </div>
      <div class="products-list">
         <h3>Product Categories</h3>
         <a href="product1.html">Medical Gas Pipeline Systems (MGPS)</a>
