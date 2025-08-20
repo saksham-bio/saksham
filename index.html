@@ -534,10 +534,13 @@ This is a single-page app that behaves like multiple pages using hash navigation
 }
 
 .register-form input,
-.register-form textarea {
+.register-form textarea,
+ .register-form select{
+  width: 100%;
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 6px;
+  box-sizing: border-box;
 }
 
 .register-form button {
