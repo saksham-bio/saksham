@@ -506,7 +506,50 @@ This is a single-page app that behaves like multiple pages using hash navigation
     max-width: 100%;
   }
 }
-
+ .register-section {
+      max-width: 700px;
+      margin: 40px auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+    .register-section h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #0066a1;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    input, textarea, select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 15px;
+    }
+    .required {
+      color: red;
+      font-weight: bold;
+    }
+    button {
+      background: #0066a1;
+      color: #fff;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #004d80;
+    }
 
 
 
@@ -792,12 +835,54 @@ We also offer refurbished medical equipment, ensuring cost-effective options wit
     </div>
     </div>
     </section>
-              <section id="register" class="page">
-      <div class="container">
-        <h1>Register</h1>
-        <p class="muted">(Registration form or dealer signup goes here.)</p>
+   <section class="register-section">
+      <h2>Register for Warranty</h2>
+      <form id="registerForm" action="save_registration.php" method="POST">
+      
+      <div class="form-group">
+        <label for="name">Full Name <span class="required">*</span></label>
+        <input type="text" id="name" name="name" required>
       </div>
-    </section>
+
+      <div class="form-group">
+        <label for="phone">Phone No. <span class="required">*</span></label>
+        <input type="tel" id="phone" name="phone" required>
+      </div>
+
+      <div class="form-group">
+        <label for="purchaseDate">Date of Purchase <span class="required">*</span></label>
+        <input type="date" id="purchaseDate" name="purchaseDate" required>
+      </div>
+
+      <div class="form-group">
+        <label for="purchaseFrom">Purchase From <span class="required">*</span></label>
+        <input type="text" id="purchaseFrom" name="purchaseFrom" required>
+      </div>
+
+      <div class="form-group">
+        <label for="productName">Product Name <span class="required">*</span></label>
+        <input type="text" id="productName" name="productName" required>
+      </div>
+
+      <div class="form-group">
+        <label for="serialNo">Serial No. <span class="required">*</span></label>
+        <input type="text" id="serialNo" name="serialNo" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email <span class="required">*</span></label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="remarks">Remarks <span class="required">*</span></label>
+        <textarea id="remarks" name="remarks" rows="4" required></textarea>
+      </div>
+
+      <button type="submit">Submit Registration</button>
+    </form>
+  </section>
+
 
     <section id="career" class="page">
       <div class="container">
