@@ -437,31 +437,6 @@ This is a single-page app that behaves like multiple pages using hash navigation
   list-style: disc;
   padding-left: 20px;
 }
-.network-image {
-  flex: none;
-  width: 50px;
-}
-
-.network-image img {
-  max-width: 300px;         /* takes full container width */
-  hight: auto;
-  border-radius: 10px;
-  object-fit: contain; /* avoids cutting */
-  display: block;
-}
-/* --- NETWORK MAP SIZE FIX --- */
-#network .network-section { display:flex; gap:20px; align-items:flex-start; }
-#network .network-text { flex: 1 1 0; }
-#network .network-image { flex: 0 0 auto; }
-
-#network .network-image img {
-  width: 280px !important;     /* ← change this number as you like */
-  height: auto !important;
-  max-width: 100% !important;
-  display: block;
-  border-radius: 10px;
-  object-fit: contain;
-}
 
 /* Clients */
 .clients {
