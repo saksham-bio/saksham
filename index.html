@@ -1127,6 +1127,23 @@ We also offer refurbished medical equipment, ensuring cost-effective options wit
         <a href="product11.html">Infusion Pumps</a>
         <a href="product12.html">Other Medical Equipment</a>
       </div>
+       <script>
+  const form = document.getElementById('registerForm');
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const response = await fetch(form.action, {
+      method: form.method,
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    });
+    if (response.ok) {
+      alert("✅ Thank you! Your application is submitted.");
+      form.reset();
+    } else {
+      alert("❌ Oops! Something went wrong. Try again.");
+    }
+  });
+</script>
   </div>
 </section>
 
