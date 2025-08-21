@@ -600,6 +600,115 @@ This is a single-page app that behaves like multiple pages using hash navigation
   color: #0066a1;
 }
 
+   
+.career-section {
+  display: flex;
+  gap: 30px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 30px;
+  margin-top: 30px;
+  align-items: flex-start;
+}
+
+.career-text {
+  flex: 2;
+}
+
+.career-text h2 {
+  color: #0066a1; /* biomedical blue */
+  margin-top: 0;
+}
+
+.career-text ul {
+  padding-left: 20px;
+}
+
+.career-text form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.career-text input, 
+.career-text textarea {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.career-text button {
+  background: #0066a1;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.career-text button:hover {
+  background: #004d78;
+}
+
+.career-image {
+  flex: 1;
+}
+
+.career-image img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+/* Product list styling */
+.product-list {
+  flex: 1;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.product-list h2 {
+  margin-top: 0;
+  font-size: 18px;
+  color: #0066a1;
+  margin-bottom: 15px;
+}
+
+.product-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.product-list li {
+  margin: 10px 0;
+}
+
+.product-list a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  padding: 6px 10px;
+  display: block;
+  border-radius: 6px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.product-list a:hover {
+  background: #f0f8ff;
+  color: #0066a1;
+}
+@media (max-width: 900px) {
+  .career-section {
+    flex-direction: column;
+  }
+}
+
 
 
 
@@ -961,11 +1070,70 @@ We also offer refurbished medical equipment, ensuring cost-effective options wit
 
 
     <section id="career" class="page">
-      <div class="container">
-        <h1>Career</h1>
-        <p class="muted">(Open positions and application instructions.)</p>
+  <div class="container career-section">
+    <!-- Left Text -->
+    <div class="career-text">
+      <h2>Careers at Saksham Biosurgical Services</h2>
+      <p>
+        At <strong>Saksham Biosurgical Services</strong>, we are always looking for 
+        passionate individuals to join our mission of delivering world-class 
+        medical equipment and healthcare solutions.
+      </p>
+      <p>
+        We offer opportunities in Sales, Service Engineering, Administration, 
+        and Operations. If you are dedicated and want to grow with us, we’d love to hear from you!
+      </p>
+      
+      <h3>Open Positions</h3>
+      <ul>
+        <li>Biomedical Service Engineer – Noida</li>
+        <li>Sales Executive – Delhi NCR</li>
+        <li>Office Coordinator – Delhi</li>
+      </ul>
+
+      <h3>Apply Now</h3>
+      <form id="careerForm" action="https://formspree.io/f/yourFormID" method="POST">
+        <label>Name *</label>
+        <input type="text" name="name" required>
+
+        <label>Email *</label>
+        <input type="email" name="_replyto" required>
+
+        <label>Phone *</label>
+        <input type="tel" name="phone" required>
+
+        <label>Position Applied For *</label>
+        <input type="text" name="position" required>
+
+        <label>Upload Resume (PDF/DOC)</label>
+        <input type="file" name="resume" accept=".pdf,.doc,.docx">
+
+        <button type="submit">Submit Application</button>
+      </form>
+    </div>
+         <div class="products-list">
+        <h3>Product Categories</h3>
+        <a href="product1.html">Medical Gas Pipeline Systems (MGPS)</a>
+        <a href="product2.html">Critical Care Equipment</a>
+        <a href="product3.html">Physiotherapy Equipment</a>
+        <a href="product4.html">Operation Theatre Equipment</a>
+        <a href="product5.html">Hospital Beds</a>
+        <a href="product6.html">Refurbished Equipment</a>
+        <a href="product7.html">Patient Monitoring Systems</a>
+        <a href="product8.html">Surgical Lights</a>
+        <a href="product9.html">Ventilators</a>
+        <a href="product10.html">Anesthesia Machines</a>
+        <a href="product11.html">Infusion Pumps</a>
+        <a href="product12.html">Other Medical Equipment</a>
       </div>
-    </section>
+
+    <!-- Right Image -->
+    <div class="career-image">
+      <img src="images/career.jpg" alt="Career opportunities">
+    </div>
+  </div>
+</section>
+
 
     <section id="inquiry" class="page">
       <div class="container">
