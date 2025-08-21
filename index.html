@@ -710,6 +710,158 @@ This is a single-page app that behaves like multiple pages using hash navigation
 }
 
 
+   /* Inquiry Section */
+.inquiry-section {
+  display: flex;
+  gap: 30px;
+  margin-top: 40px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  align-items: flex-start;
+}
+
+.inquiry-text {
+  flex: 1;
+}
+
+.inquiry-text h2 {
+  color: #0077cc; /* Biomedical blue */
+  margin-bottom: 10px;
+}
+
+.inquiry-text p {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.inquiry-text form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.inquiry-text label {
+  font-weight: 600;
+  font-size: 14px;
+  color: #333;
+}
+
+.inquiry-text input,
+.inquiry-text textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.inquiry-text button {
+  background: #0077cc;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.inquiry-text button:hover {
+  background: #005fa3;
+}
+
+.inquiry-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inquiry-image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+   /* Form Success & Error Messages */
+.form-message {
+  margin-bottom: 12px;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 14px;
+  display: none;
+}
+
+.form-message.success {
+  display: block;
+  background: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.form-message.error {
+  display: block;
+  background: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+
+   /* Product list styling */
+.product-list {
+  flex: 1;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.product-list h2 {
+  margin-top: 0;
+  font-size: 18px;
+  color: #0066a1;
+  margin-bottom: 15px;
+}
+
+.product-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.product-list li {
+  margin: 10px 0;
+}
+
+.product-list a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  padding: 6px 10px;
+  display: block;
+  border-radius: 6px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.product-list a:hover {
+  background: #f0f8ff;
+  color: #0066a1;
+}
+/* Mobile view */
+@media (max-width: 900px) {
+  .inquiry-section {
+    flex-direction: column;
+  }
+  .inquiry-image img {
+    max-width: 100%;
+  }
+}
+
+
 
 
     /* Footer */
@@ -1149,11 +1301,81 @@ We also offer refurbished medical equipment, ensuring cost-effective options wit
 
 
     <section id="inquiry" class="page">
-      <div class="container">
-        <h1>Inquiry</h1>
-        <p class="muted">(A short contact form or instructions to send procurement inquiries.)</p>
+  <div class="container inquiry-section">
+    <!-- Left Text + Form -->
+    <div class="inquiry-text">
+      <h2>Send Us Your Inquiry</h2>
+      <p>
+        Have a question about our products or services?  
+        Please fill out the form below and our team will get back to you shortly.
+      </p>
+
+      <!-- Success & Error Message -->
+      <div id="inquiryMessage" class="form-message"></div>
+
+      <form id="inquiryForm" action="https://formspree.io/f/xwpqgkvr" method="POST">
+        <label>Name *</label>
+        <input type="text" name="name" required>
+
+        <label>Email *</label>
+        <input type="email" name="_replyto" required>
+
+        <label>Phone *</label>
+        <input type="tel" name="phone" required>
+
+        <label>Subject *</label>
+        <input type="text" name="subject" required>
+
+        <label>Message *</label>
+        <textarea name="message" rows="5" required></textarea>
+
+        <button type="submit">Submit Inquiry</button>
+      </form>
+    </div>
+
+       <div class="products-list">
+        <h3>Product Categories</h3>
+        <a href="product1.html">Medical Gas Pipeline Systems (MGPS)</a>
+        <a href="product2.html">Critical Care Equipment</a>
+        <a href="product3.html">Physiotherapy Equipment</a>
+        <a href="product4.html">Operation Theatre Equipment</a>
+        <a href="product5.html">Hospital Beds</a>
+        <a href="product6.html">Refurbished Equipment</a>
+        <a href="product7.html">Patient Monitoring Systems</a>
+        <a href="product8.html">Surgical Lights</a>
+        <a href="product9.html">Ventilators</a>
+        <a href="product10.html">Anesthesia Machines</a>
+        <a href="product11.html">Infusion Pumps</a>
+        <a href="product12.html">Other Medical Equipment</a>
       </div>
-    </section>
+
+    <!-- Right Image -->
+    
+  </div>
+</section>
+
+<script>
+  const inquiryForm = document.getElementById('inquiryForm');
+  const inquiryMessage = document.getElementById('inquiryMessage');
+
+  inquiryForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const response = await fetch(inquiryForm.action, {
+      method: inquiryForm.method,
+      body: new FormData(inquiryForm),
+      headers: { 'Accept': 'application/json' }
+    });
+    if (response.ok) {
+      inquiryMessage.textContent = "✅ Thank you! Your inquiry has been submitted successfully.";
+      inquiryMessage.className = "form-message success";
+      inquiryForm.reset();
+    } else {
+      inquiryMessage.textContent = "❌ Oops! Something went wrong. Please try again.";
+      inquiryMessage.className = "form-message error";
+    }
+  });
+</script>
+
 
     <section id="contact" class="page">
       <div class="container">
