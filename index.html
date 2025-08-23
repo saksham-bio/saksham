@@ -946,6 +946,60 @@ This is a single-page app that behaves like multiple pages using hash navigation
 }
 
 
+   /* MGPS Section */
+.mgps-section {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  margin-top: 20px;
+}
+
+.mgps-text {
+  flex: 1;
+}
+
+.mgps-text h1 {
+  font-size: 28px;
+  color: #0066a1; /* Biomedical blue */
+  margin-bottom: 15px;
+}
+
+.mgps-text p, 
+.mgps-text ul {
+  color: #444;
+  line-height: 1.6;
+}
+
+.mgps-text ul {
+  margin: 15px 0;
+  padding-left: 18px;
+}
+
+.mgps-text ul li {
+  margin-bottom: 8px;
+}
+
+.mgps-text .btn {
+  display: inline-block;
+  margin-top: 15px;
+}
+
+.mgps-image {
+  flex: 1;
+  max-width: 450px;
+}
+
+.mgps-image img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+
 
 
     /* Footer */
@@ -1193,6 +1247,40 @@ We also offer refurbished medical equipment, ensuring cost-effective options wit
 
   </div>
 </section>
+   <!-- MGPS Product Page -->
+<section id="mgps" class="page">
+  <div class="container mgps-section">
+    <!-- Left: Text -->
+    <div class="mgps-text">
+      <h1>Medical Gas Pipeline Systems (MGPS)</h1>
+      <p>
+        Saksham Biosurgical Services specializes in designing, installing, and maintaining 
+        <strong>Medical Gas Pipeline Systems (MGPS)</strong> for hospitals and healthcare facilities.  
+        Our MGPS solutions are built with precision, ensuring safe, reliable, and continuous 
+        supply of medical gases like Oxygen, Nitrous Oxide, Compressed Air, and Vacuum.  
+      </p>
+      <ul>
+        <li>Centralized Oxygen Supply Systems</li>
+        <li>Vacuum and Suction Units</li>
+        <li>Compressed Air & Nitrous Oxide Systems</li>
+        <li>Bed Head Panels & Gas Outlets</li>
+        <li>Alarm and Monitoring Systems</li>
+      </ul>
+      <p>
+        With expert engineering and a dedicated service team, we ensure every MGPS 
+        project meets <strong>international safety standards</strong> and provides reliable 
+        infrastructure for critical patient care.
+      </p>
+      <a href="#contact" class="btn">Enquire Now</a>
+    </div>
+
+    <!-- Right: Image -->
+    <div class="mgps-image">
+      <img src="images/mgps.jpg" alt="Medical Gas Pipeline System">
+    </div>
+  </div>
+</section>
+
 
 
    
