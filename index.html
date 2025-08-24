@@ -1039,6 +1039,65 @@ This is a single-page app that behaves like multiple pages using hash navigation
 }
 
 
+   /* Reliable Section */
+.reliable-section {
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.reliable-content {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.reliable-image {
+  flex: 1;
+}
+.reliable-image img {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.reliable-text {
+  flex: 1;
+}
+.reliable-text h2 {
+  margin-top: 0;
+  color: #0066a1; /* Biomedical Blue */
+}
+.reliable-text p {
+  color: #444;
+  line-height: 1.6;
+}
+
+/* Client Cards */
+.clients-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+  gap: 16px;
+  margin-top: 25px;
+}
+.client-card {
+  background: #f6f8fb;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 14px;
+  text-align: center;
+  font-weight: 600;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+.client-card:hover {
+  background: #e9f5ff;
+  transform: translateY(-5px);
+}
+
+
 
 
     /* Footer */
@@ -1352,6 +1411,30 @@ We also offer refurbished medical equipment, ensuring cost-effective options wit
         gas and related construction.</p>
       </div>
     </div>
+  </div>
+
+  <div class="reliable-image">
+      <img src="images/equipment.jpg" alt="Equipment sourcing image">
+    </div>
+
+    <!-- Right Text -->
+    <div class="reliable-text">
+      <h2>Reliable Solution for<br>Equipment Sourcing</h2>
+      <p>
+        Our specialty as a medical gas installation company gives us direct access to deeper discounts with top manufacturers. 
+        We work with engineers and contractors to procure equipment at rates lower than typical distribution channels and 
+        combine these discounts with our installation services. 
+        <br><br>
+        To speak with someone about equipment, call <strong>844-339-1110</strong>.
+      </p>
+    </div>
+    <div class="clients-grid">
+    <div class="client-card">Max Hospitals</div>
+    <div class="client-card">Paras Hospitals</div>
+    <div class="client-card">JP Golden Hospital</div>
+    <div class="client-card">Fortis Hospitals</div>
+    <div class="client-card">Apollo Hospitals</div>
+    <div class="client-card">AIIMS Delhi</div>
   </div>
 </section>
    
