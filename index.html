@@ -1096,6 +1096,22 @@ This is a single-page app that behaves like multiple pages using hash navigation
   background: #e9f5ff;
   transform: translateY(-5px);
 }
+.section-heading {
+  position: relative;
+  padding-left: 70px;  /* space for line */
+  color: #222;
+}
+
+.section-heading::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 60px;
+  height: 3px;
+  background: #0066a1;  /* blue line */
+  transform: translateY(-50%);
+}
 
 
 
@@ -1419,12 +1435,14 @@ We also offer refurbished medical equipment, ensuring cost-effective options wit
     <div class="reliable-content">
       <!-- Left Image -->
       <div class="reliable-image">
-        <img src="images/equipment.jpg" alt="Equipment sourcing image">
+        <img src="images/MGPS1.jpg" alt="Equipment sourcing image">
       </div>
 
       <!-- Right Text -->
       <div class="reliable-text">
-        <h2>Reliable Solution for<br>Equipment Sourcing</h2>
+       <h2 class="section-heading">Reliable solution for</h2>
+        <h2>Reliable Solution for<br></h2>
+        <h5>Equipment Sourcing</h5>
         <p>
           Our specialty as a medical gas installation company gives us direct access to deeper discounts with top manufacturers. 
           We work with engineers and contractors to procure equipment at rates lower than typical distribution channels and 
