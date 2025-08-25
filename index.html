@@ -1115,6 +1115,69 @@ This is a single-page app that behaves like multiple pages using hash navigation
 }
 
 
+   .installation-section {
+  background: #fff;
+  padding: 50px 20px;
+  border: 1px solid #ccc;     /* Thin gray border */
+  border-radius: 10px;        /* Smooth rounded corners */
+  max-width: 1100px;
+  margin: 40px auto;          /* spacing from other sections */
+}
+
+.installation-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.installation-text {
+  flex: 1;
+}
+
+.installation-text h2 {
+  margin: 0 0 10px;
+  font-size: 28px;
+  color: #005b96; /* Biomedical blue */
+}
+
+   /* Blue underline line */
+.installation-text h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 60px;          /* length of the underline */
+  height: 3px;          /* thickness */
+  background-color: #005b96; /* same biomedical blue */
+  border-radius: 2px;
+}
+
+.installation-text h3 {
+  margin: 0 0 20px;
+  font-size: 20px;
+  color: #333;
+}
+
+.installation-text p {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 12px;
+  text-align: justify;
+}
+
+.installation-image {
+  flex: 1;
+  text-align: right;
+}
+
+.installation-image img {
+  width: 100%;
+  max-width: 480px;  /* slightly smaller */
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
 
 
     /* Footer */
@@ -1461,6 +1524,47 @@ We also offer refurbished medical equipment, ensuring cost-effective options wit
       <div class="client-card">Mediflow</div>
       <div class="client-card">Laxair</div>
       <div class="client-card">C-Flo</div>
+    </div>
+  </div>
+</section>
+
+ <!-- Installation Process Section -->
+<section class="installation-section">
+  <div class="installation-container">
+    <!-- Text content -->
+    <div class="installation-text">
+      <h2>OUR INSTALLATION PROCESS</h2>
+      <h3>How We Deliver Precision and Safety</h3>
+      <p>
+        Beginning with blueprints and system specs, our installers will review all documentation 
+        for code compliance, efficiency, and patient life safety concerns. If you do not have 
+        plans, we can engineer plans for you.
+      </p>
+      <p>
+        Once the engineering and take-off process is completed we begin sourcing your equipment, 
+        working with 12 different manufacturers to bring you the best wholesale pricing and lead 
+        times available.
+      </p>
+      <p>
+        Once the pricing and delivery of equipment has been established and approved, our 
+        superintendent will develop a site plan that lays out timelines and benchmarks for 
+        completion. Using this site plan we can work with you on scheduling details, such as 
+        start dates, completion dates, and shut downs.
+      </p>
+      <p>
+        <strong>Note:</strong> All medical gas installations will need to be verified by a third 
+        party medical gas verifier. In some cases we can arrange for this, but it will ultimately 
+        be the responsibility of the facility director to arrange the verification.
+      </p>
+      <p>
+        <strong>Note:</strong> Facility directors will be responsible for arranging the delivery 
+        of NF Nitrogen. Without this NF Nitrous Installers cannot properly install medical gas piping.
+      </p>
+    </div>
+
+    <!-- Right image -->
+    <div class="installation-image">
+      <img src="images/installation.jpg" alt="Installation Process">
     </div>
   </div>
 </section>
