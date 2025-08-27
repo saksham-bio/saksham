@@ -1292,6 +1292,81 @@ This is a single-page app that behaves like multiple pages using hash navigation
 }
 
 
+   /* Section Layout */
+#physio-equipment .container {
+  max-width: var(--max-width);
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+/* Heading with Blue Underline */
+#physio-equipment h2 {
+  font-size: 28px;
+  color: #0066a1;
+  margin: 0 auto 8px;
+  text-align: center;
+}
+#physio-equipment .blue-underline {
+  width: 60px;
+  height: 3px;
+  background: #0066a1;
+  margin: 8px auto 20px;
+  border-radius: 2px;
+}
+
+/* Intro Text */
+.intro-text {
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #444;
+  margin-bottom: 30px;
+}
+
+/* Equipment Grid */
+.physio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+/* Individual Card Design */
+.physio-card {
+  background: #fdfefe;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+.physio-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.physio-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.physio-card h3 {
+  margin: 12px 0 8px;
+  color: #333;
+  font-size: 18px;
+}
+
+.physio-card p {
+  color: #555;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+
     /* Footer */
     footer{margin-top:26px;background:#0b1b2b;color:#ddd;padding:22px 0}
     .footer-inner{max-width:var(--max-width);margin:0 auto;display:flex;gap:20px;align-items:flex-start;justify-content:space-between;padding:0 18px}
@@ -1773,6 +1848,40 @@ We also offer refurbished medical equipment, ensuring cost-effective options wit
       </div>
      
       <!-- Add more cards as needed... -->
+    </div>
+  </div>
+</section>
+
+<section id="physio-equipment" class="page">
+  <div class="container">
+    <h2>Physiotherapy Equipment</h2>
+    <div class="blue-underline"></div>
+    <p class="intro-text">
+      Explore our range of physiotherapy and rehabilitation equipment—trusted by healthcare professionals for their reliability, safety, and affordability.
+    </p>
+
+    <div class="physio-grid">
+      <div class="physio-card">
+        <img src="images/electro.jpeg" alt="Traction Unit">
+        <h3>Traction Units</h3>
+        <p>Precise and adjustable for various therapy needs.</p>
+      </div>
+      <div class="physio-card">
+        <img src="images/excer.jpeg" alt="Exercise Chair">
+        <h3>Exercise Chairs</h3>
+        <p>Optimized for ergonomic patient support.</p>
+      </div>
+      <div class="physio-card">
+        <img src="images/lrg.jpeg" alt="Tilt Table">
+        <h3>Tilt Tables</h3>
+        <p>Safe positioning with smooth control.</p>
+      </div>
+      <div class="physio-card">
+        <img src="images/tr.jpeg" alt="Quadriceps Bench">
+        <h3>Quadriceps Bench</h3>
+        <p>Perfect for strengthening rehabilitation.</p>
+      </div>
+      <!-- Add more equipment cards as needed -->
     </div>
   </div>
 </section>
