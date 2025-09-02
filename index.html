@@ -1368,7 +1368,7 @@ This is a single-page app that behaves like multiple pages using hash navigation
 
 
     /* Section Layout */
-#physio-equipment .container {
+#ot-equipment .container {
   max-width: var(--max-width);
   margin: 40px auto;
   background: #fff;
@@ -1378,13 +1378,13 @@ This is a single-page app that behaves like multiple pages using hash navigation
 }
 
 /* Heading with Blue Underline */
-#physio-equipment h2 {
+#ot-equipment h2 {
   font-size: 28px;
   color: #0066a1;
   margin: 0 auto 8px;
   text-align: center;
 }
-#physio-equipment .blue-underline {
+#ot-equipment .blue-underline {
   width: 60px;
   height: 3px;
   background: #0066a1;
@@ -1402,14 +1402,14 @@ This is a single-page app that behaves like multiple pages using hash navigation
 }
 
 /* Equipment Grid */
-.physio-grid {
+.ot-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   gap: 24px;
 }
 
 /* Individual Card Design */
-.physio-card {
+.ot-card {
   background: #fdfefe;
   padding: 20px;
   border-radius: 10px;
@@ -1417,25 +1417,25 @@ This is a single-page app that behaves like multiple pages using hash navigation
   transition: transform 0.2s, box-shadow 0.2s;
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
-.physio-card:hover {
+.ot-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 16px rgba(0,0,0,0.1);
 }
 
-.physio-card img {
+.ot-card img {
   width: 100%;
   height: 180px;
   object-fit: cover;
   border-radius: 6px;
 }
 
-.physio-card h3 {
+.ot-card h3 {
   margin: 12px 0 8px;
   color: #333;
   font-size: 18px;
 }
 
-.physio-card p {
+.ot-card p {
   color: #555;
   font-size: 15px;
   line-height: 1.5;
@@ -1968,30 +1968,30 @@ You may view our entire physiotherapy equipments range and select the most suita
     <h2>OT (Operation Theatre) Equipments</h2>
     <div class="blue-underline"></div>
     <p class="intro-text">
-      Narang Medical Limited offers a wide range for operation theatre & surgical equipment for hospitals and clinics, including OT lights, operating tables & ceiling pendants. We have combined all the equipment needed for an Operating Theatre into one easy section and you can navigate through all related categories from this page.
+Saksham Biosurgical Services offers a wide range for operation theatre & surgical equipment for hospitals and clinics, including OT lights, operating tables & ceiling pendants. We have combined all the equipment needed for an Operating Theatre into one easy section and you can navigate through all related categories from this page.
     </p>
 
-    <div class="ot-equipment">
-      <div class="ot-equipment">
+    <div class="ot-grid">
+      <div class="ot-card">
         <img src="images/seiling.jpeg" alt="Ceiling Pendants">
         <h3>Ceiling Pendants</h3>
       </div>
-      <div class="ot-equipment">
+      <div class="ot-card">
         <img src="images/electrom.jpeg" alt="Electrosurgical unit">
         <h3>Electrosurgical Unit</h3>
      
       </div>
-      <div class="ot-equipment">
+      <div class="ot-card">
         <img src="images/ot light.jpeg" alt="OT Lights">
         <h3>OT Lights</h3>
         
       </div>
-      <div class="ot-equipment">
+      <div class="ot-card">
         <img src="images/ot table.jpeg" alt="OT Tables">
         <h3>OT Tables</h3>
        
       </div>
-           <div class="ot-equipment">
+           <div class="ot-card">
         <img src="images/ele.jpg" alt="OT premiums">
         <h3>Premiums OT Series</h3>
        
