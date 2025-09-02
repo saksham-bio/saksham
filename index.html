@@ -1367,6 +1367,81 @@ This is a single-page app that behaves like multiple pages using hash navigation
 }
 
 
+    /* Section Layout */
+#physio-equipment .container {
+  max-width: var(--max-width);
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+/* Heading with Blue Underline */
+#physio-equipment h2 {
+  font-size: 28px;
+  color: #0066a1;
+  margin: 0 auto 8px;
+  text-align: center;
+}
+#physio-equipment .blue-underline {
+  width: 60px;
+  height: 3px;
+  background: #0066a1;
+  margin: 8px auto 20px;
+  border-radius: 2px;
+}
+
+/* Intro Text */
+.intro-text {
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #444;
+  margin-bottom: 30px;
+}
+
+/* Equipment Grid */
+.physio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+/* Individual Card Design */
+.physio-card {
+  background: #fdfefe;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+.physio-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.physio-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.physio-card h3 {
+  margin: 12px 0 8px;
+  color: #333;
+  font-size: 18px;
+}
+
+.physio-card p {
+  color: #555;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+
     /* Footer */
     footer{margin-top:26px;background:#0b1b2b;color:#ddd;padding:22px 0}
     .footer-inner{max-width:var(--max-width);margin:0 auto;display:flex;gap:20px;align-items:flex-start;justify-content:space-between;padding:0 18px}
@@ -1887,6 +1962,44 @@ You may view our entire physiotherapy equipments range and select the most suita
   </div>
 </section>
 
+
+   <section id="ot-equipment" class="page">
+  <div class="container">
+    <h2>OT (Operation Theatre) Equipments</h2>
+    <div class="blue-underline"></div>
+    <p class="intro-text">
+      Narang Medical Limited offers a wide range for operation theatre & surgical equipment for hospitals and clinics, including OT lights, operating tables & ceiling pendants. We have combined all the equipment needed for an Operating Theatre into one easy section and you can navigate through all related categories from this page.
+    </p>
+
+    <div class="ot-equipment">
+      <div class="ot-equipment">
+        <img src="images/seiling.jpeg" alt="Ceiling Pendants">
+        <h3>Ceiling Pendants</h3>
+      </div>
+      <div class="ot-equipment">
+        <img src="images/electrom.jpeg" alt="Electrosurgical unit">
+        <h3>Electrosurgical Unit</h3>
+     
+      </div>
+      <div class="ot-equipment">
+        <img src="images/ot light.jpeg" alt="OT Lights">
+        <h3>OT Lights</h3>
+        
+      </div>
+      <div class="ot-equipment">
+        <img src="images/ot table.jpeg" alt="OT Tables">
+        <h3>OT Tables</h3>
+       
+      </div>
+           <div class="ot-equipment">
+        <img src="images/ele.jpg" alt="OT premiums">
+        <h3>Premiums OT Series</h3>
+       
+      </div>
+      <!-- Add more equipment cards as needed -->
+    </div>
+  </div>
+</section>
 
    
     <section id="network" class="page">
